@@ -1,6 +1,8 @@
-﻿namespace TutorialThree.Containers;
+﻿using TutorialThree.Enums;
 
-public class LiquidContainer : BaseContainer
+namespace TutorialThree.Containers;
+
+public class LiquidContainer(float height, float weight, float depth, float maxPayload) : BaseContainer(ContainerType.Liquid, height, weight, depth, maxPayload)
 {
     
 }
