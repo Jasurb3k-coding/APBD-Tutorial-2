@@ -3,20 +3,19 @@ using TutorialThree.Exceptions;
 
 namespace TutorialThree.Containers;
 
-public class BaseContainer
+public abstract class BaseContainer(ContainerType containerType, float height, float weight, float depth, float maxPayload)
 {
     private static int _numberOfExistingContainers = 0;
     
-    public ContainerType ContainerType { get; set; }
+    public ContainerType ContainerType { get; set; } = containerType;
     public float CurrentTotalMass { get; set; }
     
-    public float Height { get; set; }
-    public float Weight { get; set; }
-    public float Depth { get; set; }
+    public float Height { get; set; } = height;
+    public float Weight { get; set; } = weight;
+    public float Depth { get; set; } = depth; 
+    public float MaxPayload { get; set; } = maxPayload;
+
     public string SerialNumber => $"KON-{ContainerType}-{++_numberOfExistingContainers}";
-
-    public float MaxPayload { get; set; }
-
 
     public void EmptyCargo()
     {
