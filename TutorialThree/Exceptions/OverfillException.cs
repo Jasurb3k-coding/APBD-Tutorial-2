@@ -1,4 +1,4 @@
-﻿namespace TutorialThree;
+﻿namespace TutorialThree.Exceptions;
 
 public class OverfillException : Exception
 {

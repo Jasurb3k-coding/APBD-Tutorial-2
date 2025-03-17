@@ -1,4 +1,4 @@
-﻿namespace TutorialThree;
+﻿namespace TutorialThree.Enums;
 
 public enum ContainerType
 {

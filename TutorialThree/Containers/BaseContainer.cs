@@ -1,4 +1,7 @@
-﻿namespace TutorialThree;
+﻿using TutorialThree.Enums;
+using TutorialThree.Exceptions;
+
+namespace TutorialThree.Containers;
 
 public class BaseContainer
 {
