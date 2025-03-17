@@ -15,7 +15,7 @@ public abstract class BaseContainer(ContainerType containerType, float height, f
     public float Depth { get; set; } = depth; 
     public float MaxPayload { get; set; } = maxPayload;
 
-    public string SerialNumber => $"KON-{ContainerType}-{++_numberOfExistingContainers}";
+    public string SerialNumber => $"KON-{(char)ContainerType}-{++_numberOfExistingContainers}";
 
     public void EmptyCargo()
     {
