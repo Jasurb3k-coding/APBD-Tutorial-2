@@ -2,14 +2,15 @@
 
 public class BaseContainer
 {
-    public static int NumberOfExistingContainers = 0;
+    private static int _numberOfExistingContainers = 0;
     
     public ContainerType ContainerType { get; set; }
     public float CurrentTotalMass { get; set; }
+    
     public float Height { get; set; }
     public float Weight { get; set; }
     public float Depth { get; set; }
-    public string SerialNumber => $"KON-{ContainerType}-{++NumberOfExistingContainers}";
+    public string SerialNumber => $"KON-{ContainerType}-{++_numberOfExistingContainers}";
 
     public float MaxPayload { get; set; }
 
