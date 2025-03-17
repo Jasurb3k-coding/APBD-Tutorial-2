@@ -9,13 +9,7 @@ public class BaseContainer
     public float Height { get; set; }
     public float Weight { get; set; }
     public float Depth { get; set; }
-    public string SerialNumber
-    { 
-        get
-        {
-            return $"KON-{ContainerType}-{++NumberOfExistingContainers}";
-        }
-    }
+    public string SerialNumber => $"KON-{ContainerType}-{++NumberOfExistingContainers}";
 
     public float MaxPayload { get; set; }
 
